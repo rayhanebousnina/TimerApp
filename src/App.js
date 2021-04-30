@@ -25,9 +25,22 @@ class Timer extends Component {
     
   })
  }
- 
+
 launchTimer = () => {
+  
   this.myInterval = setInterval(() => {
+    let s = this.state.s;
+
+    if (s === 60){
+      this.state.m++ 
+      this.state.s = 0 
+
+    }
+    if (this.state.m === 60){
+        this.state.h++
+        this.state.m = 0 
+    }
+
     this.setState({
       s : Number(this.state.s) +1,
     });
@@ -43,16 +56,7 @@ resetTimer = () => {
     h : 0, m : 0, s : 0
   })
 }
-//  launchTimer = () => {
-//   let b = this.state.s
-//    this.setState({
-//      b : b++
-    
-//    })
-  //  console.log(setInterval(b,1000))
-  // console.log(setInterval(this.launchTimer,1000))
 
-  
  render() {
   return(
    <div className="timer">
