@@ -67,10 +67,11 @@ resetTimer = () => {
       </label>
       <button onClick={this.convertValue}>Convertir</button>
       <br/>
-      Heure : {this.state.h}<br/>
-      Minutes : {this.state.m}<br/>
-      Secondes : {this.state.s}<br/>
-
+      <div className="flex">
+     <div className="rayhan"> Heure : {this.state.h}<br/></div>
+     <div className="rayhan">Minutes : {this.state.m}<br/></div> 
+     <div className="rayhan">Secondes : {this.state.s}<br/></div> 
+     </div>
       <button onClick={this.launchTimer}>Démarrer</button>
       <button onClick={this.stopTimer}>Stop</button>
       <button onClick={this.resetTimer}>Reset</button>
